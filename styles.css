@@ -382,6 +382,12 @@
             display: inline-block;
             transition: transform 0.3s ease;
         }
+
+        .feature-icon svg {
+            width: 44px;
+            height: 44px;
+            fill: var(--accent);
+        }
         
         .feature-card:hover .feature-icon {
             transform: scale(1.1) rotate(5deg);
