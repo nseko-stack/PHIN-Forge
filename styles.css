@@ -254,16 +254,6 @@
             letter-spacing: -2px;
         }
 
-        .hero-logo {
-            display: grid;
-            place-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-logo img {
-            width: clamp(120px, 22vw, 220px);
-            height: auto;
-        }
         
         .hero h1 .highlight {
             background: var(--gradient-1);
