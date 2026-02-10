@@ -35,6 +35,8 @@
         // Back to top button + loader
         const backToTopButton = document.querySelector('.back-to-top');
         const pageLoader = document.querySelector('.page-loader');
+        const navToggle = document.querySelector('.nav-toggle');
+        const primaryNav = document.querySelector('#primary-nav');
 
         if (backToTopButton) {
             window.addEventListener('scroll', () => {
@@ -55,3 +57,17 @@
                 pageLoader.classList.add('hidden');
             }
         });
+
+        if (navToggle && primaryNav) {
+            navToggle.addEventListener('click', () => {
+                const isOpen = primaryNav.classList.toggle('is-open');
+                navToggle.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            primaryNav.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', () => {
+                    primaryNav.classList.remove('is-open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
